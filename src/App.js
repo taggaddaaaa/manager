@@ -1,20 +1,20 @@
-import React, { component } from 'react';
-import { view, text } from 'react-native';
-import { provider } from 'react-redux';
-import { createstore } from 'redux';
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import reducers from './reducers';
 
 
-class app extends component {
+class app extends Component {
   render() {
     return (
-      <provider store={createstore(reducers)} >
-        <view>
-          <text>
+      <Provider store={createStore(reducers)} >
+        <View>
+          <Text>
              hello!
-          </text>
-        </view>
-      </provider>
+          </Text>
+        </View>
+      </Provider>
     );
   }
 }
